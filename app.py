@@ -1,26 +1,35 @@
-import streamlit as st
-from app_pages.UserStory import PageUserStory
-from app_pages.EDA import PageEDA
-from app_pages.Sklearn import PageSklearn
-from app_pages.Tensorflow import PageTensorflow
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import plotly.express as px
+import pandas as pd
 
-from scr.data_management import LoadIrisDataset
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-def main():
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-    df = LoadIrisDataset()
+# assume you have a "long-form" data frame
+# see https://plotly.com/python/px-arguments/ for more options
+df = pd.DataFrame({
+    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
+    "Amount": [4, 1, 2, 2, 4, 5],
+    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
+})
 
-    MenuOptions = [
-        'User Story',
-        'EDA',
-        'Sklearn',
-        'Tensorflow',
-        ]
-    page = st.sidebar.selectbox("Main Menu",MenuOptions,index=0)
-    
-    if page == MenuOptions[0]: PageUserStory(df)
-    elif page == MenuOptions[1]: PageEDA(df)   
-    elif page == MenuOptions[2]: PageSklearn(df)
-    elif page == MenuOptions[3]: PageTensorflow(df)
+fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
 
-if __name__ == '__main__': main()
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for Python.
+    '''),
+
+    dcc.Graph(
+        id='example-graph',
+        figure=fig
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
