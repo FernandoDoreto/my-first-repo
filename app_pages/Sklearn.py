@@ -12,38 +12,53 @@ from sklearn.metrics import classification_report,confusion_matrix
 	
 
 def PageSklearn(df,TARGET):
-    st.write("This is PageSklearn")
+    if st.button("Fit a ML Pipeline and Predict"):
 
-    X_train, X_test,y_train, y_test = train_test_split(
-                                        df.drop([TARGET],axis=1),
-                                        df[TARGET],
-                                        test_size=0.2,
-                                        random_state=0,
-                                        stratify=df[TARGET]
-                                        )
+        X_train, X_test,y_train, y_test = train_test_split(
+                                            df.drop([TARGET],axis=1),
+                                            df[TARGET],
+                                            test_size=0.2,
+                                            random_state=0,
+                                            stratify=df[TARGET]
+                                            )
 
-    ml_pipeline = CreateFitPipeline(X_train,y_train)
+        ml_pipeline = CreateFitPipeline(X_train,y_train)
+
+        st.write("### Predictions and Evaluation on Test Set")
+        PredictAndEvaluate(ml_pipeline,X_test,y_test)
 
 
 def PredictAndEvaluate(ml_pipeline,X,y):
 
-    Pred = ml_pipeline.predict(X_test)
-    st.write(Pred_Xtest)
+    Pred = ml_pipeline.predict(X)
+    st.write("#### Predictions")
+    st.write(Pred)
 
-    st.code(classification_report(y_test, Pred_Xtest))
+    st.write("#### Classification Report")
+    st.code(classification_report(y, Pred))
 
-    st.code(pd.DataFrame(confusion_matrix(y_pred_adj,y_test),
-                    columns=['pred_neg', 'pred_pos'], 
-                    index=['neg', 'pos']))
+    st.write("#### Confusion Matrix")
+    ClassMap = ['0','1','2']
+
+    st.code(pd.DataFrame(confusion_matrix(Pred,y),
+                columns=[ ["Actual " + sub for sub in ClassMap] ], 
+                index = [ ["Prediction " + sub for sub in ClassMap ]]
+                # index=['Prediction 0', 'Prediction 1']
+                ))
 
 
 def CreateFitPipeline(X_train,y_train):
 
     ml_pipeline = Pipeline([       
         ("feat_selection",SelectFromModel(DecisionTreeClassifier())),
-        ("scaler",StandardScaler()),
+        ("feat_scaling",StandardScaler()),
         ("model", DecisionTreeClassifier())
     ])
 
     ml_pipeline.fit(X_train,y_train)
+
+    st.write("#### Your ML Pipeline was created and fit!")
+    st.code(ml_pipeline)
+    st.write("---")
+
     return ml_pipeline
