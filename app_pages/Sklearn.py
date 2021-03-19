@@ -5,7 +5,7 @@ import numpy as np
 
 
 def PageSklearn(df,TARGET):
-    if st.button("Fit a ML Pipeline and Predict"):
+    if st.button("Fit a ML Pipeline with Sklearn and Predict"):
 
         X_train, X_test,y_train, y_test = TrainTestSplit(df,TARGET)
 
