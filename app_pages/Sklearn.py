@@ -33,11 +33,15 @@ def TrainTestSplit(df,TARGET):
 
     return X_train, X_test,y_train, y_test
 
-def PredictAndEvaluate(ml_pipeline,X,y):
+def PredictAndEvaluate(ml_pipeline,X,y,flag="sklearn"):
 
     from sklearn.metrics import classification_report,confusion_matrix
 
-    Pred = ml_pipeline.predict(X)
+    if flag == 'sklearn':
+        Pred = ml_pipeline.predict(X)
+    else: 
+        Pred = ml_pipeline.predict_classes(X)
+    
     st.write("#### Predictions")
     st.write(Pred)
 
