@@ -12,5 +12,5 @@ def PageEDA(df):
     Plot3D(df,"Species")
 
     st.write("---")
-    st.write("#### Heatmap")
+    st.write("#### Correlation Heatmap")
     HeatmapCorrelation(df)
