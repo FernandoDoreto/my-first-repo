@@ -21,6 +21,6 @@ def main():
     if page == MenuOptions[0]: PageUserStory(df)
     elif page == MenuOptions[1]: PageEDA(df)   
     elif page == MenuOptions[2]: PageSklearn(df,TARGET="Species")
-    elif page == MenuOptions[3]: PageTensorflow(df)
+    elif page == MenuOptions[3]: PageTensorflow(df,TARGET="Species")
 
 if __name__ == '__main__': main()

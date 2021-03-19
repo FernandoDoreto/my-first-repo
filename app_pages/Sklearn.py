@@ -2,18 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-from sklearn.model_selection import train_test_split
 
-
-
-	
 
 def PageSklearn(df,TARGET):
     if st.button("Fit a ML Pipeline and Predict"):
 
         X_train, X_test,y_train, y_test = TrainTestSplit(df,TARGET)
 
-        ml_pipeline = CreateFitPipeline(X_train,y_train)
+        ml_pipeline = CreateFitSklearnPipeline(X_train,y_train)
 
         st.write("### Predictions and Evaluation on Test Set")
         PredictAndEvaluate(ml_pipeline,X_test,y_test)
@@ -22,6 +18,7 @@ def PageSklearn(df,TARGET):
 
 
 def TrainTestSplit(df,TARGET):
+    from sklearn.model_selection import train_test_split
 
     X_train, X_test,y_train, y_test = train_test_split(
                                         df.drop([TARGET],axis=1),
@@ -57,7 +54,7 @@ def PredictAndEvaluate(ml_pipeline,X,y):
                 ))
 
 
-def CreateFitPipeline(X_train,y_train):
+def CreateFitSklearnPipeline(X_train,y_train):
 
     from sklearn.pipeline import Pipeline
     from sklearn.feature_selection import SelectFromModel
