@@ -1,4 +1,4 @@
 import streamlit as st
 
-def PageUserStory():
+def PageUserStory(df):
     st.write("This is PageUserStory")
