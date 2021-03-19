@@ -3,24 +3,15 @@ import pandas as pd
 import numpy as np
 
 from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.feature_selection import SelectFromModel
-from sklearn.preprocessing import StandardScaler
-from sklearn.tree import DecisionTreeClassifier 
 
-from sklearn.metrics import classification_report,confusion_matrix
+
+
 	
 
 def PageSklearn(df,TARGET):
     if st.button("Fit a ML Pipeline and Predict"):
 
-        X_train, X_test,y_train, y_test = train_test_split(
-                                            df.drop([TARGET],axis=1),
-                                            df[TARGET],
-                                            test_size=0.2,
-                                            random_state=0,
-                                            stratify=df[TARGET]
-                                            )
+        X_train, X_test,y_train, y_test = TrainTestSplit(df,TARGET)
 
         ml_pipeline = CreateFitPipeline(X_train,y_train)
 
@@ -28,7 +19,26 @@ def PageSklearn(df,TARGET):
         PredictAndEvaluate(ml_pipeline,X_test,y_test)
 
 
+
+
+def TrainTestSplit(df,TARGET):
+
+    X_train, X_test,y_train, y_test = train_test_split(
+                                        df.drop([TARGET],axis=1),
+                                        df[TARGET],
+                                        test_size=0.2,
+                                        random_state=0,
+                                        stratify=df[TARGET]
+                                        )
+    st.write(" * Train Set", pd.concat([X_train,y_train], axis=1))
+    st.write("* Test Set", pd.concat([X_test,y_test], axis=1))
+    st.write("---")
+
+    return X_train, X_test,y_train, y_test
+
 def PredictAndEvaluate(ml_pipeline,X,y):
+
+    from sklearn.metrics import classification_report,confusion_matrix
 
     Pred = ml_pipeline.predict(X)
     st.write("#### Predictions")
@@ -49,6 +59,11 @@ def PredictAndEvaluate(ml_pipeline,X,y):
 
 def CreateFitPipeline(X_train,y_train):
 
+    from sklearn.pipeline import Pipeline
+    from sklearn.feature_selection import SelectFromModel
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.tree import DecisionTreeClassifier 
+
     ml_pipeline = Pipeline([       
         ("feat_selection",SelectFromModel(DecisionTreeClassifier())),
         ("feat_scaling",StandardScaler()),
@@ -57,7 +72,7 @@ def CreateFitPipeline(X_train,y_train):
 
     ml_pipeline.fit(X_train,y_train)
 
-    st.write("#### Your ML Pipeline was created and fit!")
+    st.write("### Your ML Pipeline was created and fit to the Train Set!")
     st.code(ml_pipeline)
     st.write("---")
 
