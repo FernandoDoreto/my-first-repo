@@ -16,7 +16,7 @@ def main():
         'Sklearn',
         'Tensorflow',
         ]
-    page = st.sidebar.selectbox("Main Menu",MenuOptions,index=0)
+    page = st.sidebar.radio("Main Menu",MenuOptions,index=0)
     
     if page == MenuOptions[0]: PageUserStory(df)
     elif page == MenuOptions[1]: PageEDA(df)   

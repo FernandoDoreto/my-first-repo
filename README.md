@@ -17,10 +17,9 @@ system capable to distinguish among 3 distinct Iris flowers.
 the middle of nowehere.
 The team will harvest the flowers and store on boxes, but each box should have 1 specie type. 
 The mission will happen in 10 days and will take 20 days. 
-
 ### App
 * We will create an App to inform what is the flower species based on sepal and petal measurements. 
-It is a 3-class, single-label, classification model: 0 (Setosa ), 1 (Versicolour) and 2 (Virginica).
+It is a 3-class, single-label, classification model: 0 (Setosa), 1 (Versicolour) and 2 (Virginica).
 * Our ideal outcome is to provide Special Flowers botanics team a intelligent solution to speed up
 species diagnostic during the mission. The field operator will measure, with a ruler or something, 
 the petal and sepal and will feed the App.
