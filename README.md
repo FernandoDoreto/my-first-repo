@@ -10,7 +10,7 @@ will run properly at **Gitpod** and at **Code Challenge System**
 * Tensorflow': Sequential model - validates Tensorflow runs at gitpod
 
 
-## Narrative and Business Requirements
+## Narrative
 * As a Data Analyst from Botanic Garden, you are requested by Special Flower division to develop a 
 system capable to distinguish among 3 distinct Iris flowers. 
 * Their next field mission at XYZ forest, which is officialy declared as contaminated area and is in 
