@@ -10,14 +10,15 @@ will run properly at **Gitpod** and at **Code Challenge System**
 * Tensorflow': Sequential model - validates Tensorflow runs at gitpod
 
 
-## Narrative 
+## Narrative and Business Requirements
 * As a Data Analyst from Botanic Garden, you are requested by Special Flower division to develop a 
 system capable to distinguish among 3 distinct Iris flowers. 
 * Their next field mission at XYZ forest, which is officialy declared as contaminated area and is in 
 the middle of nowehere.
 The team will harvest the flowers and store on boxes, but each box should have 1 specie type. 
 The mission will happen in 10 days and will take 20 days. 
-### App
+
+### ML Business Case
 * We will create an App to inform what is the flower species based on sepal and petal measurements. 
 It is a 3-class, single-label, classification model: 0 (Setosa), 1 (Versicolour) and 2 (Virginica).
 * Our ideal outcome is to provide Special Flowers botanics team a intelligent solution to speed up
