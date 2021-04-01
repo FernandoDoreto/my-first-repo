@@ -1,9 +1,9 @@
 vscode:
   extensions:
-    - magicstack.magicpython@1.1.1:Q+4h8/d9eu9kME/nNfIDlg==
-    - almenon.arepl@1.0.20:Uu7lIOwyLgmNWpTwCl/iqQ==
-    - hookyqr.beautify@1.4.11:n9DJEUFbYD/YHaBXxm+pYw==
-    - coenraads.bracket-pair-colorizer@1.0.61:+jQByqALW0iXkhpd2yzYzQ==
+    - ms-python.python@2019.8.30787:TnGEOx35GXMhyKLjDGz9Aw==
+    - formulahendry.auto-close-tag@0.5.9:JZIefALANqOfhSK1TU4+Fw==
+    - mkaufman.HTMLHint@0.10.0:xevX4CvYOkKd8xjvtJQiGQ==
+    - eventyret.bootstrap-4-cdn-snippet@1.9.0:I8wcXFcKWQIROg7J0SLLqg==
     - esbenp.prettier-vscode@5.7.1:4Zx39KyQMoIz7x94PSmDmQ==
     - kevinglasson.cornflakes-linter@0.5.1:KAaMshgHOKan8eojXQ53OQ==
 
