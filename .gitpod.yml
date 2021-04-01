@@ -4,9 +4,7 @@ vscode:
     - kiteco.kite@0.109.0:5JGG8ShofGbQkrlfxHq5ZQ==
     - almenon.arepl@1.0.20:Uu7lIOwyLgmNWpTwCl/iqQ==
     - hookyqr.beautify@1.4.11:n9DJEUFbYD/YHaBXxm+pYw==
-
     - coenraads.bracket-pair-colorizer@1.0.61:+jQByqALW0iXkhpd2yzYzQ==
-
     - pkief.material-icon-theme@4.6.0:MERinNbuyLgLWxy7kbUsvA==
 
 tasks:
