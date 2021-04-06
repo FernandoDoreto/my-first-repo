@@ -13,22 +13,22 @@ print("\n")
 # cast a list of list to make a matrix (2d array) np.array()
 my_matrix = [[1,2,3],[4,5,6],[7,8,9]]
 arr = np.array(my_matrix)
-print(arr)
+print(arr, end='\n\n')
 print(arr.shape)
+print(arr.dtype)
 print("\n")
 
 
 # Return spaced values within a given interval
 arr = np.arange(start=1,stop=8,step=1)
-print(arr)
-print("\n")
+print(arr, end='\n\n')
 
 # Generate arrays of zeros or ones
-print(np.zeros((5,4)))
-print("\n")
+arr = np.zeros((5,4))
+print(arr, end='\n\n')
 
-print(np.ones((3,3)))
-print("\n")
+arr = np.ones((3,3))
+print(arr, end='\n\n')
 
 # np.linspace(start,stop,n_points)
 # np.eye(diagonal)
@@ -39,29 +39,34 @@ print("\n")
 np.random.seed(seed=1)
 # random samples from a uniform distribution over [0, 1)
 arr = np.random.rand(2,2) 
-print(arr)
-print("\n")
+print(arr, end='\n\n')
 
 
 # random integers from low (inclusive) to high (exclusive).
-arr = np.random.randint(low=1, high=100, size=50)
-print(arr)
-print("\n")
+arr = np.random.randint(low=1, high=100, size=30)
+print(arr, end='\n\n')
+
 
 # reshape() method
-arr = arr.reshape(5,10)
-print(arr)
-print("\n")
+arr = arr.reshape(5,6)
+print(arr, end='\n\n')
 
 
-
-
+print(
+    arr.argmax()
+)
 # .max()  .min()   
-# argmax() index location of max
-# argmin()
-# .shape
-# .dtype
+# argmax() , argmin() index location of max
+
+
+
 # slice notation to pickup elements  [8]  [1:5] [:7] [4:]
+print(
+    arr[2:,3:]
+)
+
+
+
 # broadcast - copy and reference of array  .copy()
 # arr_2d[1,1]
 # arr_2d[:2,1:]
