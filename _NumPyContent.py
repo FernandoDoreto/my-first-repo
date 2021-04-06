@@ -2,26 +2,33 @@
 # array (1d vectors and matrices)
 
 import numpy as np
+import streamlit as st
 
-# cast list into a array,
+st.write("* Cast list into a array")
 my_list = [1,2,3]
 arr = np.array(my_list)
-print(arr)
-print(arr.shape)
-print("\n")
+st.write(
+    arr,
+    arr.shape,
+    arr.dtype,
+    type(arr)
+)
 
-# cast a list of list to make a matrix (2d array) np.array()
-my_matrix = [[1,2,3],[4,5,6],[7,8,9]]
+st.write("* Cast a list of list to make a matrix (2d array)")
+my_matrix = [[1,2,3],[4,5,6],[7,8,9],[15,15,10]]
 arr = np.array(my_matrix)
-print(arr, end='\n\n')
-print(arr.shape)
-print(arr.dtype)
-print("\n")
+st.write(
+    arr,
+    arr.shape,
+    arr.dtype,
+    type(arr)
+)
 
 
-# Return spaced values within a given interval
+st.write("* Return spaced values within a given interval")
 arr = np.arange(start=1,stop=8,step=1)
-print(arr, end='\n\n')
+st.write(arr, arr.shape,type(arr))
+
 
 # Generate arrays of zeros or ones
 arr = np.zeros((5,4))
