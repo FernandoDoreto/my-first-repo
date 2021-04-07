@@ -60,6 +60,36 @@
   * xxxxx
   * xxxxx
 
+## LO37 - 37.2
+* CRISP-DM
+  * Step 1 Business Understanding: (jsut refer to the business requirements)
+  * Step 2 Data Understanding: (might be sth related to EDA)
+  * Step 3 Data Preparation: (might be sth related to data cleaning/feat engineering)
+  * Step 4 Modeling: (might be one script to define/train a model/pipeline)
+  * Step 5 Evaluation: (script related to evaluation)
+  * Step 6 Deployment: script related to deployment
+
+
+## LO37 - 37.3
+* xxxxx
+
+
+## LO38 - 38.1
+* script src/processing/data_management.py
+  * function xxx, line xxxx, pd.DataFrame() is used for ...
+  * function xxx, line xxxx, .groupby() is used for ...
+
+## LO38 - 38.2
+* script src/processing/xxxxxx.py
+  * function xxx, line xxxx, xxx is used for ...
+
+## LO38 - 38.3
+* xxxxxxx
+
+
+
+
+
 
 
 ## Mini App Example
