@@ -55,3 +55,7 @@ and analyze on the field which species that sample belong, but this may take 3h 
 ### LO35 - 35.2
 * ML Task 1: Regression - mapped to Business Requirement 1 - xxxxx
 * ML Task 2: Classification - mapped to Business Requirement 2 - xxxx
+
+### LO35 - 35.3
+* Regression1 - Business Requirement 1 - Linear Model showed better performance (R2) than RandomForest and Decision Tree
+* Classification - Business Requirement 1 - Logistic Regression showed better performance (Recall) than RandomForest and Decision Tree
