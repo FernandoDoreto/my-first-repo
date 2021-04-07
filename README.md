@@ -1,19 +1,29 @@
 # README file from student to deliver Milestone project
 
+## Project Purpose
+* In this project, you'll build a Data Web App to ....
+
 ## Business Requirements 
-* xxxxx
-* xxxxx
-* xxxxxxx
+* 1- We are interested to (know ....)
+* 2 -We are interested to (predict ...)
+* 3 - We want to analyze (how we ...)
+* 4 - We also want (.....)
 
 
 ## Assessment Criteria
 ### LO35 - 35.2
-* ML Task 1: Regression - mapped to Business Requirement 1 - xxxxx
-* ML Task 2: Classification - mapped to Business Requirement 2 - xxxx
+* ML Task 1: Regression - mapped to Business Requirement 1 - describe what this ML task is doing specifically (ex.: predicting churn levels, recommending personalized product)
+* ML Task 2: Classification - mapped to Business Requirement 2 - describe what this ML task is doing specifically
 
 ### LO35 - 35.3
-* Regression1 - Business Requirement 1 - Linear Model showed better performance (R2) than RandomForest and Decision Tree
-* Classification - Business Requirement 1 - Logistic Regression showed better performance (Recall) than RandomForest and Decision Tree
+* Reg1_BR1: Regression task related to Business Requirement 1 - Linear Model showed better performance (R2) than RandomForest and Decision Tree
+* Clf1_BR2: Binary Classifier related to Business Requirement 2 - Logistic Regression showed better performance (Recall) than RandomForest and Decision Tree
+
+### LO35 - 35.4
+* Stakeholders:
+* Team Structure and role
+* End users
+
 
 ### LO36 - 36.1
 * Business Requirement 1
@@ -25,21 +35,30 @@
   * xxxx
 
 ### LO36 - 36.2
-* Regression1
+* Reg1_BR1
   * We will create an App to inform....
   * The success metrics are:...  The ML model is considered a failure if ...
   * The output is defined as ....
   * The training data to fit the model come from.... 
   * Heuristics: If we didnt use ML ...
 
-*  Classification1
-    * We will create an App to inform....
-    * The success metrics are:...  The ML model is considered a failure if ...
-    * The output is defined as ....
-    * The training data to fit the model come from.... 
-    * Heuristics: If we didnt use ML ...
+*  Clf1_BR2
+   * We will create an App to inform....
+   * The success metrics are:...  The ML model is considered a failure if ...
+   * The output is defined as ....
+   * The training data to fit the model come from.... 
+   * Heuristics: If we didnt use ML ...
+
+## LO36 - 36.3
+* how to transform Data App to ML API
 
 
+## LO37 - 37.1
+* Data documentation
+  * xxxx
+  * xxxxx
+  * xxxxx
+  * xxxxx
 
 
 
