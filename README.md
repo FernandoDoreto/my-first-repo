@@ -51,4 +51,7 @@ Botanic Garden warranties the measurments are accurate and free of any bias or e
 * Heuristics: If we didnt use ML, an alternative option could be to take a flower DNA sample 
 and analyze on the field which species that sample belong, but this may take 3h to be done.
 
-
+## Assessment Criteria
+### LO35 - 35.2
+* ML Task 1: Regression - mapped to Business Requirement 1 - xxxxx
+* ML Task 2: Classification - mapped to Business Requirement 2 - xxxx
