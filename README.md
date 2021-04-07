@@ -15,10 +15,12 @@
 * ML Task 1: Regression - mapped to Business Requirement 1 - describe what this ML task is doing specifically (ex.: predicting churn levels, recommending personalized product)
 * ML Task 2: Classification - mapped to Business Requirement 2 - describe what this ML task is doing specifically
 
+---
 ### LO35 - 35.3
 * Reg1_BR1: Regression task related to Business Requirement 1 - Linear Model showed better performance (R2) than RandomForest and Decision Tree
 * Clf1_BR2: Binary Classifier related to Business Requirement 2 - Logistic Regression showed better performance (Recall) than RandomForest and Decision Tree
 
+---
 ### LO35 - 35.4
 * Stakeholders:
 * Team Structure and role
