@@ -3,6 +3,14 @@
 ## Project Purpose
 * In this project, you'll build a Data Web App to ....
 
+
+## External user’s goal
+* The Data Web App stakeholders are interested to ....
+
+## Data Web App owner's goal
+* The goal of this Data Web App is to ....
+
+
 ## Business Requirements 
 * 1- We are interested to (know ....)
 * 2 -We are interested to (predict ...)
@@ -51,18 +59,18 @@
    * The training data to fit the model come from.... 
    * Heuristics: If we didnt use ML ...
 
-## LO36 - 36.3
+### LO36 - 36.3
 * how to transform Data App to ML API
 
 
-## LO37 - 37.1
+### LO37 - 37.1
 * Data documentation
   * xxxx
   * xxxxx
   * xxxxx
   * xxxxx
 
-## LO37 - 37.2
+### LO37 - 37.2
 * CRISP-DM
   * Step 1 Business Understanding: (jsut refer to the business requirements)
   * Step 2 Data Understanding: (might be sth related to EDA)
@@ -72,20 +80,20 @@
   * Step 6 Deployment: script related to deployment
 
 
-## LO37 - 37.3
+### LO37 - 37.3
 * xxxxx
 
 
-## LO38 - 38.1
+### LO38 - 38.1
 * script src/processing/data_management.py
   * function xxx, line xxxx, pd.DataFrame() is used for ...
   * function xxx, line xxxx, .groupby() is used for ...
 
-## LO38 - 38.2
+### LO38 - 38.2
 * script src/processing/xxxxxx.py
   * function xxx, line xxxx, xxx is used for ...
 
-## LO38 - 38.3
+### LO38 - 38.3
 * xxxxxxx
 
 
